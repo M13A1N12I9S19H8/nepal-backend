@@ -8,7 +8,7 @@ app.use(cors());
 const PORT = process.env.PORT || 3000;
 
 // 🔴 IMPORTANT: put your real password
-const uri = "mongodb+srv://manish_admin:YOUR_PASSWORD@cluster0.a9l5xbj.mongodb.net/myDB?retryWrites=true&w=majority";
+const uri = process.env.MONGO_URI;
 
 let db;
 

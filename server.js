@@ -21,7 +21,7 @@ async function connectDB() {
 
 app.get("/places", async (req, res) => {
   try {
-    const data = await db.collection("places").find({}).toArray();
+    const data = await db.collection("Places").find({}).toArray();
     res.json(data);
   } catch (err) {
     res.status(500).send(err.message);
